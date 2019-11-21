@@ -1,5 +1,5 @@
 #
-# Be sure to run `bundle exec pod lib lint WordPress-Editor-iOS.podspec' to ensure this is a
+# Be sure to run `bundle exec pod lib lint WordPress-Aztec-iOS.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'WordPress-Editor-iOS'
-  s.version          = '1.11.0'
-  s.summary          = 'The WordPress HTML Editor.'
+  s.name             = 'WordPress-Aztec-iOS'
+  s.version          = '1.11.0'/Users/carroll/Develop/Objective-C/Objective-C.xcworkspace
+  s.summary          = 'The native HTML Editor.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                       The WordPress HTML Editor by Automattic Inc.
+                       The native HTML Editor by Automattic Inc.
                        DESC
 
   s.homepage         = 'https://github.com/wordpress-mobile/WordPress-Aztec-iOS'
@@ -30,14 +30,16 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.0'
 
-  s.module_name = "WordPressEditor"
-  s.source_files = 'WordPressEditor/WordPressEditor/Classes/**/*'
-  s.resources = 'WordPressEditor/WordPressEditor/Assets/**/*'
+  s.module_name = "Aztec"
+  s.source_files = 'Aztec/Classes/**/*'
+  s.resource_bundles = {
+    'WordPress-Aztec-iOS': [
+      "Aztec/Assets/**/*"
+    ]
+  }
 
   s.xcconfig = {'OTHER_LDFLAGS' => '-lxml2',
   				'HEADER_SEARCH_PATHS' => '/usr/include/libxml2'}
-
-  s.dependency "WordPress-Aztec-iOS", s.version.to_s
 end
 
 
