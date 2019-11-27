@@ -1,4 +1,14 @@
-# Aztec for iOS: Native HTML Editor
+
+## 针对 Wordrepss 开源 AztecEditor 项目做了些调整优化更符合实际开发使用
+
+未来不定期合并原项目 Issues 中已经解决的一些 bug 
+
+目前已修复的 bug 列表: 
+
+1.修复有中文输入切换标题与正常错乱的 bug ， 原项目未对中文字符串做适配。
+
+
+## Aztec for iOS: Native HTML Editor
 
 <p align="center">
 <img width=200px height=200px src="RepoAssets/aztec.png" alt="Aztec's Logo'"/>
